@@ -1,0 +1,248 @@
+/* Estilo para o corpo */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #121212; /* Fundo escuro */
+    color: #aaa; /* Texto em cinza claro */
+}
+
+/* Cabeçalho */
+header {
+    background-color: #121212;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5em;
+    color: #00f5d4; /* Azul Neon */
+}
+
+/* Navegação */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1em;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ff7b7b; /* Rosa Neon */
+}
+
+/* Home Section */
+.home {
+    background: linear-gradient(45deg, #00f5d4, #ff7b7b);
+    background-size: 400% 400%;
+    animation: gradient-animation 10s ease infinite;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    opacity: 0;
+    padding: 0 20px;
+}
+
+@keyframes gradient-animation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Sobre Section */
+.sobre {
+    padding: 80px 20px;
+    background-color: #333; /* Escuro para contraste */
+    text-align: center;
+    opacity: 0;
+}
+
+.sobre h2 {
+    color: #00f5d4; /* Azul Neon */
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.sobre p {
+    color: #fff;
+    font-size: 1.2em;
+}
+
+/* Habilidades Section */
+.habilidades {
+    background-color: #222; /* Fundo escuro */
+    color: #fff;
+    padding: 80px 20px;
+    text-align: center;
+    opacity: 0;
+}
+
+.habilidades h2 {
+    color: #00f5d4; /* Azul Neon */
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.habilidades ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 30px;
+}
+
+.habilidades ul li {
+    margin: 15px 0;
+    font-size: 1.2em;
+}
+
+/* Contato Section */
+.contato {
+    background: #121212;
+    color: #fff;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.contato-title {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #00f5d4; /* Azul Neon */
+}
+
+.contato-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+/* Estilo para as caixas dentro do contato */
+.contato-info,
+.contato-form-container {
+    background: #333;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    flex: 1;
+    text-align: center;
+    max-width: 400px;
+    min-width: 300px;
+}
+
+.contato-info p {
+    font-size: 1.2em;
+    color: #aaa;
+    margin-bottom: 10px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-icons .icon {
+    color: #ff7b7b; /* Rosa Neon */
+    font-size: 1.8em;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icons .icon:hover {
+    transform: scale(1.2);
+    color: #00f5d4; /* Azul Neon */
+}
+
+.contato-form-container {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 2px solid #444;
+    border-radius: 10px;
+    background-color: #222;
+    color: white;
+    font-size: 1.1em;
+}
+
+input:focus, textarea:focus {
+    border-color: #00f5d4; /* Azul Neon */
+    outline: none;
+}
+
+textarea {
+    height: 150px;
+}
+
+button.btn-submit {
+    width: 100%;
+    padding: 15px;
+    background-color: #ff7b7b; /* Rosa Neon */
+    color: white;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button.btn-submit:hover {
+    background-color: #00f5d4; /* Azul Neon */
+}
+
+.mensagem-confirmacao {
+    display: none;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1.2em;
+    color: #ff7b7b; /* Rosa Neon */
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .contato-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contato-info,
+    .contato-form-container {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+
+    .contato-info p {
+        font-size: 1em;
+    }
+
+    .habilidades ul li {
+        font-size: 1.1em;
+    }
+
+    .habilidades h2 {
+        font-size: 2em;
+    }
+}
