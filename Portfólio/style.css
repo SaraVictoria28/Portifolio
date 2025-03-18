@@ -1,0 +1,275 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(45deg, #6a0dad, #000000, #1e3a8a);
+    background-size: 300% 300%;
+    animation: gradient 10s ease infinite;
+    color: white;
+}
+
+header {
+
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px 0;
+    z-index: 100;
+    transition: top 0.3s ease;
+}
+
+header.hidden {
+    top: -80px;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 20px 20px;
+    position: sticky;
+}
+
+header .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+header ul {
+    list-style: none;
+    display: flex;
+}
+
+header ul li {
+    margin: 0 15px;
+}
+
+header ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+header ul li a:hover {
+    color: #6a0dad;
+}
+
+#sobre {
+    margin-top: 2cm;
+    display: flex;
+    justify-content: center;
+}
+
+section {
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.foto-perfil {
+    width: 150px;
+    height: auto;
+    border-radius:100%;
+}
+
+
+.projeto-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+    gap: 20px;
+    padding: 20px;
+    flex-wrap: wrap;
+    /* Permite que os projetos se ajustem em telas menores */
+}
+
+.projeto {
+    text-align: center;
+    width: 30%;
+    background-color: #3e3e3e;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.projeto img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.projeto p {
+    font-size: 1rem;
+    color: #f0f0f0;
+}
+
+.projeto:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    transform: translateY(-5px);
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 4px;
+    border: 1px solid #6c059b;
+    font-size: 1rem;
+}
+
+form button {
+    padding: 10px 25rem;
+    background-color: #6a0dad;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+#contato {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 5rem;
+}
+
+#form-contato {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 25rem;
+}
+
+form button:hover {
+    background-color: #5e0b8b;
+    width: 50%;
+}
+
+footer img {
+    width: 3rem;
+    display: flex;
+    height: auto;
+}
+
+footer a {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: white;
+    text-decoration: none;
+}
+
+footer {
+    width: 100vw;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 20px 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    margin-top: 40px;
+    gap: 0.5rem;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Media Queries para responsividade */
+
+@media (max-width: 1200px) {
+    header .logo {
+        font-size: 1.5rem;
+    }
+
+    header ul li {
+        margin: 0 10px;
+    }
+
+    .projeto {
+        width: 45%;
+    }
+}
+
+@media (max-width: 768px) {
+    header ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header ul li {
+        margin: 10px 0;
+    }
+
+    .projeto-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .projeto {
+        width: 80%;
+        /* Faz os projetos ocuparem mais espaço em telas menores */
+    }
+
+    form button {
+        padding: 10px 20px;
+        width: 100%;
+    }
+
+    #form-contato {
+        padding: 0 2rem;
+    }
+
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    footer img {
+        width: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header .logo {
+        font-size: 1.2rem;
+    }
+
+    header ul li a {
+        font-size: 0.9rem;
+    }
+
+    .projeto {
+        width: 100%;
+    }
+
+    footer {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    footer img {
+        width: 2.5rem;
+    }
+}
